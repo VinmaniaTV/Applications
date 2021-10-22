@@ -1,0 +1,16 @@
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.GlobalUsings.g.cs
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.csproj.AssemblyReference.cache
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.AssemblyInfoInputs.cache
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.AssemblyInfo.cs
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.csproj.CoreCompileInputs.cache
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\Applications.exe
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\Applications.deps.json
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\Applications.runtimeconfig.json
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\Applications.dll
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\ref\Applications.dll
+C:\Users\vinma\Desktop\Projets\Applications\Applications\bin\Debug\net6.0\Applications.pdb
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.dll
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\ref\Applications.dll
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.pdb
+C:\Users\vinma\Desktop\Projets\Applications\Applications\obj\Debug\net6.0\Applications.genruntimeconfig.cache
