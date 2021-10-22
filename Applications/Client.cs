@@ -8,10 +8,34 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Client {
+<<<<<<< Updated upstream
     public string nom;
     public string adresse;
     public string téléphone;
     public string datePremièreCommande;
+=======
+
+
+    public string nom   {
+    get { return nom;}
+    set { nom = value; }  
+    }
+
+    public string adresse {
+    get { return adresse}
+    set { adresse=value ;} 
+    }
+
+    public string téléphone{
+    get { return téléphone;}
+    set { téléphone = value;}
+    }
+
+    public string datePremièreCommande {
+    get { return datePremièreCommande;}
+    set { datePremièreCommande = value;}
+    }
+>>>>>>> Stashed changes
 
     public Commande commandeActuelle;
 

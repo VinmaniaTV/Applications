@@ -11,8 +11,22 @@ using class Cuisinier;
 using class Livreur;
 
 public class Commis {
+<<<<<<< Updated upstream
     public string name;
     public int nbrCommande;
+=======
+
+    
+
+    public string name  {
+    get { return name;}
+    set { name = value; }  
+    }
+    public int nbrCommande  {
+    get { return nbrCommande;}
+    set { nbrCommande = value; }  
+    }
+>>>>>>> Stashed changes
     public Client clientActuelle;
     public Commande commandeActuelle;
 

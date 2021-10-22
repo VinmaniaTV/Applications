@@ -8,7 +8,15 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Cuisinier {
+<<<<<<< Updated upstream
     public string nom;
+=======
+
+    public string nom   {
+    get { return nom;}
+    set { nom = value; }  
+    }
+>>>>>>> Stashed changes
 
     public Cuisinier(string nom)
     {

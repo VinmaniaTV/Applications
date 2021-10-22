@@ -8,7 +8,15 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Livreur {
+<<<<<<< Updated upstream
     public int id;
+=======
+
+    public int id   {
+    get { return id;}
+    set { id = value; }  
+    }
+>>>>>>> Stashed changes
 
     public Livreur(int id)
     {
@@ -21,7 +29,7 @@ public class Livreur {
         if (random === 15) {
             Console.WriteLine("Votre adresse est incorrecte");
             Console.WriteLine("Entrez votre adresse:");
-            //commande.client.adress faire un set avec un console.WriteLine()
+            commande.client.adresse = console.ReadLine();
         }
         Console.WriteLine('Le livreur est entrain de vous apporter votre commande. Il arrivera dans ' + random + 'minutes');
         Task.Delay(random * 1000);

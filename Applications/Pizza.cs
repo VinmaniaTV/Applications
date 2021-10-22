@@ -5,10 +5,34 @@ using System.Linq;
 using System.Text;
 
 public class Pizza {
+<<<<<<< Updated upstream
     public string nom;
     public string taille;
     public int time; 
     public int prix;
+=======
+
+
+    public string nom  {
+    get { return nom;}
+    set { nom = value; }  
+    }
+
+    public string taille   {
+    get { return taille;}
+    set { taille = value; }  
+    }
+
+    public int time   {
+    get { return time;}
+    set { time = value; }  
+    } 
+
+    public int prix   {
+    get { return prix;}
+    set { prix = value; }  
+    }
+>>>>>>> Stashed changes
 
     public Pizza(string nom, string time, int time, int prix)
     {
