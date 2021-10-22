@@ -8,10 +8,29 @@ namespace Applications.model
 {
     public class Pizza
     {
-        public string nom;
-        public string taille;
-        public int time;
-        public int prix;
+        public string nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+
+        public string taille
+        {
+            get { return taille; }
+            set { taille = value; }
+        }
+
+        public int time
+        {
+            get { return time; }
+            set { time = value; }
+        }
+
+        public int prix
+        {
+            get { return prix; }
+            set { prix = value; }
+        }
 
         public Pizza(string nom, string taille, int time, int prix)
         {

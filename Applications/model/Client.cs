@@ -8,11 +8,31 @@ using System.Threading.Tasks;
 
 namespace Applications.model
 {
-    public class Client {
-        public string nom;
-        public string adresse;
-        public string téléphone;
-        public string datePremièreCommande;
+    public class Client
+    {
+        public string nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+
+        public string adresse
+        {
+            get { return adresse}
+            set { adresse = value; }
+        }
+
+        public string téléphone
+        {
+            get { return téléphone; }
+            set { téléphone = value; }
+        }
+
+        public string datePremièreCommande
+        {
+            get { return datePremièreCommande; }
+            set { datePremièreCommande = value; }
+        }
 
         public Commande commandeActuelle;
 
@@ -38,7 +58,8 @@ namespace Applications.model
             this.commandeActuelle = null;
         }
 
-        public void payer() {
+        public void payer()
+        {
             Task.Delay(3000);
             Console.WriteLine("Est ce que votre commande a été livrée?");
             String confirmation = Console.ReadLine();
@@ -77,7 +98,8 @@ namespace Applications.model
             }
         }
 
-        public async void commander(List<String> pizza, List<String> boisson) {
+        public async void commander(List<String> pizza, List<String> boisson)
+        {
             await Task.Run(() => commandeActuelle.TransmettreCommande(pizza, boisson));
         }
     }

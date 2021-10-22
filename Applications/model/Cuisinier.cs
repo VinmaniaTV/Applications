@@ -10,7 +10,11 @@ namespace Applications.model
 {
     public class Cuisinier
     {
-        public string nom;
+        public string nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
 
         public Cuisinier(string nom)
         {

@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 namespace Applications.model
 {
     public class Livreur {
-        public int id;
+        public int id
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         public Livreur(int id)
         {

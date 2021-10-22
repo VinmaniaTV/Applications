@@ -9,12 +9,30 @@ using System.Threading.Tasks;
 namespace Applications.model
 {
     public class Commande {
-        public int numéro;
-        public string heure;
-        public DateTime date;
+        public int numéro
+        {
+            get { return numéro; }
+            set { numéro = value; }
+        }
+
+        public string heure
+        {
+            get { return heure; }
+            set { heure = value; }
+        }
+
+        public DateTime date
+        {
+            get { return date; }
+            set { date = value; }
+        }
         public Client client;
         public Commis commis;
-        public List<String> items;
+        public List<String> items {
+            get { return items; }
+            set { items = value; }
+        }
+
 
         public Commande()
         {
