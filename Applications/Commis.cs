@@ -11,9 +11,6 @@ using class Cuisinier;
 using class Livreur;
 
 public class Commis {
-
-    
-
     public string name;
     public int nbrCommande;
     public Client clientActuelle;
@@ -80,7 +77,7 @@ public class Commis {
             await Task.Run(() => clientActuelle.commander(listeDePizza, []));
         }
     }
-     public async void gestionCommande(Commande commande)
+    public async void gestionCommande(Commande commande)
     {
         this.commandeActuelle = commande;
         this.nbrCommande += 1;
@@ -89,9 +86,6 @@ public class Commis {
         await Task.Run(() => cuisinier.cuisiner(commandeActuelle));
         // Livreur livreur = recherche dans la base de données de livreur
         Task.Delay(5000);
-        await Task.Run(() => livreur.livrer(commandeActuelle));
-        
+        await Task.Run(() => livreur.livrer(commandeActuelle));   
     }
-
-
 }

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Cuisinier {
-
     public string nom;
 
     public Cuisinier(string nom)
@@ -21,7 +20,4 @@ public class Cuisinier {
         Task.Delay(tempsDePréparation * 1000);
 
     }
-
-
-
 }

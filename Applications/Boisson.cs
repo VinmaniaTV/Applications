@@ -5,13 +5,8 @@ using System.Linq;
 using System.Text;
 
 public class Boisson {
-
-
-
     public string nom;
-
     public int volume;
-
     public int prix;
 
     public Boisson(string nom, int volume, int prix)
@@ -20,5 +15,4 @@ public class Boisson {
         this.volume = volume;
         this.prix = prix;
     }
-
 }

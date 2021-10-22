@@ -9,17 +9,11 @@ using class Commis;
 using class Client;
 
 public class Commande {
-
     public int numéro;
-
     public string heure;
-
     public DateTime date;
-
     public Client client;
-
     public Commis commis;
-
     public List<String> items;
 
 
@@ -30,8 +24,7 @@ public class Commande {
         this.date = date;
         this.client = client;
         this.commis = commis;
-        this.items = items;
-        
+        this.items = items;        
     }
 
     public void TransmettreCommande(List<String> pizza, List<String> boisson)
@@ -39,6 +32,4 @@ public class Commande {
         this.items = pizza + boisson;
         commis.gestionCommande(//get commis.commandeActuelle);
     }
-
-
 }

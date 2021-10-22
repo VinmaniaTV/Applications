@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Livreur {
-
     public int id;
-
 
     public Livreur(int id)
     {
@@ -30,6 +28,4 @@ public class Livreur {
         Console.WriteLine('Le livreur est arrivé à votre adresse');
         commande.client.payer();
     }
-
-
 }

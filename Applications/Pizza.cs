@@ -5,14 +5,9 @@ using System.Linq;
 using System.Text;
 
 public class Pizza {
-
-
     public string nom;
-
     public string taille;
-
     public int time; 
-
     public int prix;
 
     public Pizza(string nom, string time, int time, int prix)
@@ -22,5 +17,4 @@ public class Pizza {
         this.time = time;
         this.prix = prix;
     }
-
 }

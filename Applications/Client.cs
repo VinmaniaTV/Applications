@@ -8,14 +8,9 @@ using System.Threading.Tasks;
 using class Commande;
 
 public class Client {
-
-
     public string nom;
-
     public string adresse;
-
     public string téléphone;
-
     public string datePremièreCommande;
 
     public Commande commandeActuelle;
@@ -28,10 +23,7 @@ public class Client {
         this.téléphone = téléphone;
         this.datePremièreCommande = datePremièreCommande;
         this.commandeActuelle = commandeActuelle;
-
-
     }
-
 
     public void payer() {
         Task.Delay(3000);
@@ -73,7 +65,6 @@ public class Client {
     }
 
     public async void commander(List<String> pizza, List<String> boisson ) {
-
         await Task.Run(() => commandeActuelle.TransmettreCommande(pizza,boisson));
     }
 
