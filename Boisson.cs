@@ -6,14 +6,19 @@ using System.Text;
 
 public class Boisson {
 
-    public Boisson() {
+
+
+    public string nom;
+
+    public int volume;
+
+    public int prix;
+
+    public Boisson(string nom, int volume, int prix)
+    {
+        this.nom = nom;
+        this.volume = volume;
+        this.prix = prix;
     }
-
-    public void nom;
-
-    public void volume;
-
-    public void prix;
-
 
 }
