@@ -5,6 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+<<<<<<< Updated upstream:Applications/model/Client.cs
+=======
+using class Commande;
+
+public class Client {
+
+    public string nom;
+    public string adresse;
+    public string téléphone;
+    public string datePremièreCommande;
+
+>>>>>>> Stashed changes:Applications/Client.cs
 
 namespace Applications.model
 {
@@ -34,7 +46,15 @@ namespace Applications.model
             set { datePremièreCommande = value; }
         }
 
+<<<<<<< Updated upstream:Applications/model/Client.cs
         public Commande commandeActuelle;
+=======
+    public string datePremièreCommande {
+    get { return datePremièreCommande;}
+    set { datePremièreCommande = value;}
+    }
+
+>>>>>>> Stashed changes:Applications/Client.cs
 
         public Client()
         {

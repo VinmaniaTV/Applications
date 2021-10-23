@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+<<<<<<< Updated upstream:Applications/model/Commis.cs
 namespace Applications.model
 {
     public class Commis {
@@ -21,10 +22,18 @@ namespace Applications.model
         }
         public Client clientActuelle;
         public Commande commandeActuelle;
+=======
+public class Commis {
+
+    public string name;
+    public int nbrCommande;
+
+>>>>>>> Stashed changes:Applications/Commis.cs
 
         public Commis()
         {
 
+<<<<<<< Updated upstream:Applications/model/Commis.cs
         }
         public Commis(string name, int nbrCommande, Client clientActuelle, Commande commandeActuelle)
         {
@@ -33,6 +42,19 @@ namespace Applications.model
             this.clientActuelle = clientActuelle;
             this.commandeActuelle = commandeActuelle;
         }
+=======
+    public string name  {
+    get { return name;}
+    set { name = value; }  
+    }
+    public int nbrCommande  {
+    get { return nbrCommande;}
+    set { nbrCommande = value; }  
+    }
+
+    public Client clientActuelle;
+    public Commande commandeActuelle;
+>>>>>>> Stashed changes:Applications/Commis.cs
 
 
         public async void questionner() {

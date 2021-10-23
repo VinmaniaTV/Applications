@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
+<<<<<<< Updated upstream:Applications/model/Livreur.cs
 namespace Applications.model
 {
     public class Livreur {
@@ -14,6 +15,18 @@ namespace Applications.model
             get { return id; }
             set { id = value; }
         }
+=======
+public class Livreur {
+
+    public int id;
+
+
+    public int id   {
+    get { return id;}
+    set { id = value; }  
+    }
+
+>>>>>>> Stashed changes:Applications/Livreur.cs
 
         public Livreur(int id)
         {
