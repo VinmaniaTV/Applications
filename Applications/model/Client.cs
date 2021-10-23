@@ -68,11 +68,11 @@ namespace Applications.model
         {
             Task.Delay(3000);
             Console.WriteLine("Est ce que votre commande a été livrée?");
-            String confirmation = Console.ReadLine();
+            string confirmation = Console.ReadLine();
             if (confirmation == "No")
             {
                 Console.WriteLine("Entrez de nouveau votre adresse:");
-                string confAdresse = Console.ReadLine();
+                string confAdresse =Console.ReadLine();
                 if (adresse == confAdresse)
                 {
                     Console.WriteLine("Nous ne comprenons pas l'erreur. Notre livreur est à la bonne adresse. Veuillez nous excuser de ce désagréments");
