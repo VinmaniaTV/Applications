@@ -57,13 +57,13 @@ namespace Applications.model
 
 
         public async void questionner() {
-                Console.WriteLine("Quelle est votre nom?");
-                String nom = Console.ReadLine();
-                Console.WriteLine("Quelle est votre adresse?");
-                String adresseClient = Console.ReadLine();
-                Console.WriteLine("Quelle est votre telephone?");
-                String telephoneClient = Console.ReadLine();
-                this.ClientActuelle = new Client(nom, adresseClient, telephoneClient, "");
+            Console.WriteLine("Quelle est votre nom?");
+            String nom = Console.ReadLine();
+            Console.WriteLine("Quelle est votre adresse?");
+            String adresseClient = Console.ReadLine();
+            Console.WriteLine("Quelle est votre telephone?");
+            String telephoneClient = Console.ReadLine();
+            this.ClientActuelle = new Client(nom, adresseClient, telephoneClient, "");
             Pizza pizza1 = new Pizza("Fromage", "petite", 10, 10);
             Pizza pizza2 = new Pizza("Fromage", "moyenne", 15, 20);
             Pizza pizza3 = new Pizza("Fromage", "grande", 20, 30);
@@ -90,22 +90,29 @@ namespace Applications.model
                 //NbrCommande++;
                 
                 ClientActuelle.CommandeActuelle = new Commande(1, DateTime.Now.ToString("HH:mm"), DateTime.Now, ClientActuelle, this, listeDePizza);
-                await Task.Run(() => ClientActuelle.Commander(listeDePizza, listeDeBoisson));
+                this.ClientActuelle.Commander(listeDePizza, listeDeBoisson, ClientActuelle.CommandeActuelle);
             }
             else {
-                 ClientActuelle.Commander(listeDePizza, null);
+                ClientActuelle.CommandeActuelle = new Commande(1, DateTime.Now.ToString("HH:mm"), DateTime.Now, ClientActuelle, this, listeDePizza);
+                this.ClientActuelle.Commander(listeDePizza, null, ClientActuelle.CommandeActuelle);
             }
+            await Task.Run(() => this.gestionCommande());
         }
-        public async void gestionCommande(Commande commande)
+        public async void gestionCommande()
         {
-           CommandeActuelle = commande;
             NbrCommande += 1;
-            Console.WriteLine("La commande a bien ete pris en compte");
+            Console.WriteLine("La commande a bien ete prise en compte");
             Cuisinier cuisinier = new Cuisinier("JU");
+            
             await Task.Run(() => cuisinier.Cuisiner(CommandeActuelle));
-            Livreur livreur = new Livreur("ge");
-            Task.Delay(5000);
-            await Task.Run(() => livreur.livrer(CommandeActuelle));
+            this.gestionLivraison();
+        }
+        
+        public async void gestionLivraison()
+        {
+            Livreur livreur = new Livreur("GE");
+            await Task.Run(() => livreur.Livrer(CommandeActuelle));
+            this.ClientActuelle.Payer();
         }
     }
 }

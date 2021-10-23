@@ -21,7 +21,7 @@ namespace Applications.model
         {
             this.Nom = nom;
         }
-        public void livrer(Commande commande) {
+        public void Livrer(Commande commande) {
             Random rnd = new Random();
             int random = rnd.Next(20);
             if (random == 15) {
@@ -30,9 +30,8 @@ namespace Applications.model
                 commande.Client.Adresse = Console.ReadLine();
             }
             Console.WriteLine("Le livreur est entrain de vous apporter votre commande. Il arrivera dans " + random + " minutes");
-            Task.Delay(random * 1000);
+            Task.Delay(random * 1000).Wait();
             Console.WriteLine("Le livreur est arrivé à votre adresse");
-            commande.Client.payer();
         }
     }
 }

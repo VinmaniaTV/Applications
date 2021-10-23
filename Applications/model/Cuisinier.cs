@@ -25,11 +25,11 @@ namespace Applications.model
         {
             this.Nom = nom;
         }
-        public void Cuisiner(Commande commande)
+        public async void Cuisiner(Commande commande)
         {
             int tempsDePréparation = 15;
-            Task.Delay(tempsDePréparation * 1000);
-
+            Task.Delay(tempsDePréparation * 1000).Wait();
+            Console.WriteLine("La pizza est cuisinée.");
         }
     }
 }

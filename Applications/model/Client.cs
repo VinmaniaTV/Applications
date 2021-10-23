@@ -64,9 +64,9 @@ namespace Applications.model
         }
 
 
-        public void payer()
+        public void Payer()
         {
-            Task.Delay(3000);
+            Task.Delay(3000).Wait();
             Console.WriteLine("Est ce que votre commande a été livrée?");
             string confirmation = Console.ReadLine();
             if (confirmation == "No")
@@ -104,9 +104,10 @@ namespace Applications.model
             }
         }
 
-        public async void Commander(ArraySegment<String> pizza, ArraySegment<String> boisson)
+        public void Commander(ArraySegment<String> pizza, ArraySegment<String> boisson, Commande commande)
         {
-            await Task.Run(() => CommandeActuelle.TransmettreCommande(pizza, boisson));
+            this.CommandeActuelle = commande;
+            commande.TransmettreCommande(pizza, boisson);
         }
     }
 }

@@ -62,8 +62,7 @@ namespace Applications.model
 
         public void TransmettreCommande(ArraySegment<String> pizza, ArraySegment<String> boisson)
         {
-            Items = pizza.Concat(boisson).ToArray();
-            Commis.gestionCommande(Commis.CommandeActuelle);
+            this.Items = pizza.Concat(boisson).ToArray();
         }
     }
 }
