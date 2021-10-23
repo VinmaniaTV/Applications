@@ -8,9 +8,21 @@ namespace Applications.model
 {
     public class Boisson
     {
-        public string nom;
-        public int volume;
-        public int prix;
+        private string nom
+        {
+            get { return nom; }
+            set { nom = value; }
+        }
+        private int volume
+        {
+            get { return volume; }
+            set { volume = value; }
+        }
+        private int prix
+        {
+            get { return prix; }
+            set { prix = value; }
+        }
 
         public Boisson(string nom, int volume, int prix)
         {

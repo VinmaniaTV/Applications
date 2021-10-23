@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pizzas  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Pizza>
+		<nom>Fromage</nom>
+		<taille> petite</taille>
+		<time> 10</time>
+		<prix> 10</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Fromage</nom>
+		<taille> moyenne</taille>
+		<time> 20</time>
+		<prix> 15</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Fromage</nom>
+		<taille> grande</taille>
+		<time> 30</time>
+		<prix> 20</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Végétarienne</nom>
+		<taille> petite</taille>
+		<time> 15</time>
+		<prix> 15</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Végétarienne</nom>
+		<taille> moyenne</taille>
+		<time> 20</time>
+		<prix> 18</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Végétarienne</nom>
+		<taille> grande</taille>
+		<time> 30</time>
+		<prix> 25</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Chorizo</nom>
+		<taille> petite</taille>
+		<time> 5</time>
+		<prix> 10</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Chorizo</nom>
+		<taille> moyenne</taille>
+		<time> 10</time>
+		<prix> 15</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Chorizo</nom>
+		<taille> grande</taille>
+		<time> 15</time>
+		<prix> 20</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Royale</nom>
+		<taille> petite</taille>
+		<time> 10</time>
+		<prix> 10</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Royale</nom>
+		<taille> moyenne</taille>
+		<time> 15</time>
+		<prix> 15</prix>
+	</Pizza>
+	<Pizza>
+		<nom>Royale</nom>
+		<taille> grande</taille>
+		<time> 20</time>
+		<prix> 18</prix>
+	</Pizza>
+</Pizzas>

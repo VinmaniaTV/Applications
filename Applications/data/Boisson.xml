@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Boissons  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Boisson>
+		<nom> Coca-cola</nom>
+		<volume>25</volume>
+		<prix> 2</prix>
+	</Boisson>
+	<Boisson>
+		<nom> Coca-cola</nom>
+		<volume>50</volume>
+		<prix> 4</prix>
+	</Boisson>
+</Boissons>

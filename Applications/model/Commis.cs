@@ -5,56 +5,44 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
-<<<<<<< Updated upstream:Applications/model/Commis.cs
+using var reader = XmlReader.Create("data.xml");
+
 namespace Applications.model
 {
     public class Commis {
-        public string name
+
+        private string nom
         {
-            get { return name; }
-            set { name = value; }
+            get { return nom; }
+            set { nom = value; }
         }
-        public int nbrCommande
+        private int nbrCommande
         {
             get { return nbrCommande; }
             set { nbrCommande = value; }
         }
-        public Client clientActuelle;
-        public Commande commandeActuelle;
-=======
-public class Commis {
-
-    public string name;
-    public int nbrCommande;
-
->>>>>>> Stashed changes:Applications/Commis.cs
-
-        public Commis()
+        private Client clientActuelle
         {
-
-<<<<<<< Updated upstream:Applications/model/Commis.cs
+            get { return clientActuelle; }
+            set { clientActuelle = value; }
         }
-        public Commis(string name, int nbrCommande, Client clientActuelle, Commande commandeActuelle)
+        private Commande commandeActuelle
         {
-            this.name = name;
+            get { return commandeActuelle; }
+            set { commandeActuelle = value; }
+        }
+
+
+        public Commis(string nom, int nbrCommande, Client clientActuelle, Commande commandeActuelle)
+        {
+            this.nom = nom;
             this.nbrCommande = nbrCommande;
             this.clientActuelle = clientActuelle;
             this.commandeActuelle = commandeActuelle;
         }
-=======
-    public string name  {
-    get { return name;}
-    set { name = value; }  
-    }
-    public int nbrCommande  {
-    get { return nbrCommande;}
-    set { nbrCommande = value; }  
-    }
 
-    public Client clientActuelle;
-    public Commande commandeActuelle;
->>>>>>> Stashed changes:Applications/Commis.cs
 
 
         public async void questionner() {
@@ -64,7 +52,7 @@ public class Commis {
             {
                 Console.WriteLine("Quelle est votre numéro de téléphone?");
                 String téléphone = Console.ReadLine();
-                String adresse = clientActuelle.adresse;
+                String adresse = 
                 Console.WriteLine("Votre adresse est-elle troujours" + adresse + "?");
                 String res = Console.ReadLine();
                 if (res == "No")
@@ -81,32 +69,25 @@ public class Commis {
                 String adresseClient = Console.ReadLine();
                 Console.WriteLine("Quelle est votre téléphone?");
                 String téléphoneClient = Console.ReadLine();
-                this.clientActuelle = new Client(nom, adresseClient, téléphoneClient, "");
+                clientActuelle = new Client(nom, adresseClient, téléphoneClient, "");
             }
             Console.WriteLine("Quelle pizza désirez vous? (Format: quantité_1, taille_1, nom_pizza_1, quantité_2, taille_2, nom_pizza_2)");
             String pizza = Console.ReadLine();
-            //List<String> listeDePizza = pizza.Split(",");
-            //for (int i = 1; i < pizza.Length; i++)
-            //{
-            //    if (listeDePizza[i] == null) {
-            //        //faire un try and catch error
-            //    }
-            //}
-
+            Array listeDePizza = pizza.Split(',');
             Console.WriteLine("Désirez vous une boisson avec?");
             String resBoisson = Console.ReadLine();
             if (resBoisson == "Yes")
             {
                 Console.WriteLine("Quelle boisson désirez vous? (Format: quantité_1 contenance(en cl) nom_boisson_1, quantité_2 boisson_2)");
                 String boisson = Console.ReadLine();
-                //List<String> listeDeBoisson = boisson.Split(",");
-                //int numéroDeCommande = ;
-                //clientActuelle.commandeActuelle = new Commande(numéroDeCommande, DateTime.Now.ToString("HH:mm"), DateTime.Now, clientActuelle, Commis(this.name, this.nbrCommande, this.clientActuelle,), listeDePizza + listeDeBoisson)
-                //set
-                //await Task.Run(() => clientActuelle.commander(listeDePizza, listeDeBoisson));
+                Array listeDeBoisson = boisson.Split(",");
+                numéroDeCommande++;
+                clientActuelle.commandeActuelle = new Commande(numéroDeCommande, DateTime.Now.ToString("HH:mm"), DateTime.Now, clientActuelle, this, listeDePizza + listeDeBoisson);
+                
+                await Task.Run(() => clientActuelle.commander(listeDePizza, listeDeBoisson));
             }
             else {
-                //await Task.Run(() => clientActuelle.commander(listeDePizza, []));
+                await Task.Run(() => clientActuelle.commander(listeDePizza, []));
             }
         }
         public async void gestionCommande(Commande commande)

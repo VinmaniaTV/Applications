@@ -5,60 +5,52 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-<<<<<<< Updated upstream:Applications/model/Client.cs
-=======
-using class Commande;
 
-public class Client {
-
-    public string nom;
-    public string adresse;
-    public string téléphone;
-    public string datePremièreCommande;
-
->>>>>>> Stashed changes:Applications/Client.cs
 
 namespace Applications.model
 {
     public class Client
     {
-        public string nom
+        private string nom
         {
             get { return nom; }
             set { nom = value; }
-        }
+        };
 
-        public string adresse
+        private string adresse
         {
             get { return adresse}
             set { adresse = value; }
-        }
+        };
 
-        public string téléphone
+        private string téléphone
         {
             get { return téléphone; }
             set { téléphone = value; }
-        }
+        };
 
-        public string datePremièreCommande
+        private string datePremièreCommande
         {
             get { return datePremièreCommande; }
             set { datePremièreCommande = value; }
-        }
+        };
 
-<<<<<<< Updated upstream:Applications/model/Client.cs
-        public Commande commandeActuelle;
-=======
-    public string datePremièreCommande {
-    get { return datePremièreCommande;}
-    set { datePremièreCommande = value;}
-    }
-
->>>>>>> Stashed changes:Applications/Client.cs
-
+        private Commande commandeActuelle
+        {
+            get { return commandeActuelle; }
+            set { commandeActuelle = value; }
+        };
         public Client()
         {
 
+        }
+        public Client(string nom, string addresse, string télédphone, string datePremièreOrder)
+        {
+            this.nom = nom;
+            this.addresse = addresse;
+            this.téléphone = téléphone;
+            this.datePremièreOrder = datePremièreOrder;
+            this.commandeActuelle = null;
         }
         public Client(string nom, string adresse, string téléphone, string datePremièreCommande, Commande commandeActuelle)
         {
@@ -69,14 +61,6 @@ namespace Applications.model
             this.commandeActuelle = commandeActuelle;
         }
 
-        public Client(string nom, string adresse, string téléphone, string datePremièreCommande)
-        {
-            this.nom = nom;
-            this.adresse = adresse;
-            this.téléphone = téléphone;
-            this.datePremièreCommande = datePremièreCommande;
-            this.commandeActuelle = null;
-        }
 
         public void payer()
         {

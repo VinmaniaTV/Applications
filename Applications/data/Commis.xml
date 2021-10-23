@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Commi  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Commis>
+		<nom>Jean</nom>
+		<nbrCommande>0</nbrCommande>
+	</Commis>
+	<Commis>
+		<nom>Jacques</nom>
+		<nbrCommande>0</nbrCommande>
+	</Commis>
+	<Commis>
+		<nom>Jira</nom>
+		<nbrCommande>0</nbrCommande>
+	</Commis>
+</Commi>

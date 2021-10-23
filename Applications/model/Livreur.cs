@@ -6,31 +6,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-<<<<<<< Updated upstream:Applications/model/Livreur.cs
 namespace Applications.model
 {
     public class Livreur {
-        public int id
+        public int nom
         {
-            get { return id; }
-            set { id = value; }
+            get { return nom; }
+            set { nom = value; }
         }
-=======
-public class Livreur {
-
-    public int id;
 
 
-    public int id   {
-    get { return id;}
-    set { id = value; }  
-    }
-
->>>>>>> Stashed changes:Applications/Livreur.cs
-
-        public Livreur(int id)
+        public Livreur(string nom)
         {
-            this.id = id;
+            this.nom = nom;
         }
 
         public void livrer(Commande commande) {
@@ -39,7 +27,7 @@ public class Livreur {
             if (random == 15) {
                 Console.WriteLine("Votre adresse est incorrecte");
                 Console.WriteLine("Entrez votre adresse:");
-                //commande.client.adress faire un set avec un console.WriteLine()
+                commande.client.adresse = console.WriteLine();
             }
             Console.WriteLine("Le livreur est entrain de vous apporter votre commande. Il arrivera dans " + random + " minutes");
             Task.Delay(random * 1000);

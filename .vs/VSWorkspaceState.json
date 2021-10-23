@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Applications",
+    "\\Applications\\controller",
+    "\\Applications\\data",
+    "\\Applications\\model",
+    "\\Applications\\obj"
   ],
-  "SelectedNode": "\\Client.cs",
+  "SelectedNode": "\\Applications.sln",
   "PreviewInSolutionExplorer": false
 }

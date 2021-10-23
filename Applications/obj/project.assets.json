@@ -8,26 +8,32 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\vinma\\.nuget\\packages\\": {}
+    "C:\\Users\\mende\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vinma\\Desktop\\Projets\\Applications\\Applications\\Applications.csproj",
+      "projectUniqueName": "C:\\Users\\mende\\source\\repos\\Applications\\Applications\\Applications.csproj",
       "projectName": "Applications",
-      "projectPath": "C:\\Users\\vinma\\Desktop\\Projets\\Applications\\Applications\\Applications.csproj",
-      "packagesPath": "C:\\Users\\vinma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vinma\\Desktop\\Projets\\Applications\\Applications\\obj\\",
+      "projectPath": "C:\\Users\\mende\\source\\repos\\Applications\\Applications\\Applications.csproj",
+      "packagesPath": "C:\\Users\\mende\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mende\\source\\repos\\Applications\\Applications\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\vinma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mende\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -54,12 +60,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

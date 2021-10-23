@@ -12,8 +12,16 @@ namespace Applications.controller
         public static void writeToXml(Object o)
         {
             XmlSerializer xs = new XmlSerializer(o.GetType());
-            TextWriter tw = new StreamWriter(@"..\..\..\data\data.xml");
+            TextWriter tw = new StreamWriter(@"..\..\..\data\obj.xml");
             xs.Serialize(tw, o);
         }
+       
+
+        public static void readFromXml(string s)
+        {
+                var sr = new StreamReader(@"..\..\..\data\"+ s+".xml"))
+                obj = (ob)xs.Deserialize(sr);
+        }
     }
+}
 }
