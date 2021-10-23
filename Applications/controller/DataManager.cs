@@ -9,18 +9,25 @@ namespace Applications.controller
 {
     public class DataManager
     {
-        public static void writeToXml(Object o)
+        public static void writeToXml(object l)
         {
-            XmlSerializer xs = new XmlSerializer(o.GetType());
-            TextWriter tw = new StreamWriter(@"..\..\..\data\obj.xml");
-            xs.Serialize(tw, o);
+            XmlSerializer xs = new XmlSerializer(l.GetType());
+            TextWriter tw = new StreamWriter(@"..\..\..\data\"+l.GetType().Name+".xml");
+            xs.Serialize(tw, l);
+            tw.Close();
         }
 
-        public static void readFromXml(string s)
+        public static Object readFromXml(Type type)
         {
-            var sr = new StreamReader(@"..\..\..\data\" + s + ".xml");
-                obj = (ob)xs.Deserialize(sr);
+            if (type is null)
+            {
+                throw new ArgumentNullException(nameof(type));
+            }
+
+            XmlSerializer xs = new XmlSerializer(type);
+            var sr = new StreamReader(@"..\..\..\data\" + type.Name + ".xml");
+            return xs.Deserialize(sr); 
         }
     }
 }
-}
+

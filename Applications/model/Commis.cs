@@ -36,6 +36,15 @@ namespace Applications.model
             get { return _commandeActuelle; }
             set { _commandeActuelle = value; }
         }
+        public Commis()
+        {
+
+        }
+        public Commis(string nom, int nbrCommande)
+        {
+            this.Nom = nom; 
+            this.NbrCommande = nbrCommande; 
+        }
 
         public Commis(string nom, int nbrCommande, Client clientActuelle, Commande commandeActuelle)
         {
@@ -48,63 +57,55 @@ namespace Applications.model
 
 
         public async void questionner() {
-            Console.WriteLine("Avez vous deja fait une commande dans notre restaurant auparavant?");
-            String n = Console.ReadLine();
-            if (n == "Yes")
-            {
-                Console.WriteLine("Quelle est votre numero de telephone?");
-                String telephone = Console.ReadLine();
-                System.Xml.Linq.XDocument doc = XDocument.Load(@"..\..\..\data\data.xml");
-                String adr = from Client in doc.Root.Elements("Client")
-                             where Client.Element("telephone").Value.Contains("0123456789")
-                             select Client.Element("adresse").Value;
-                Console.WriteLine("Votre adresse est-elle toujours" + adr + "?");
-                String res = Console.ReadLine();
-                if (res == "No")
-                {
-                    Console.WriteLine("Quelle est votre nouvelle adresse?");
-                    String nouvelleAdresse = Console.ReadLine();
-                }
-            }
-            else
-            {
                 Console.WriteLine("Quelle est votre nom?");
                 String nom = Console.ReadLine();
                 Console.WriteLine("Quelle est votre adresse?");
                 String adresseClient = Console.ReadLine();
-                Console.WriteLine("Quelle est votre t�l�phone?");
+                Console.WriteLine("Quelle est votre telephone?");
                 String telephoneClient = Console.ReadLine();
                 this.ClientActuelle = new Client(nom, adresseClient, telephoneClient, "");
-            }
-            Console.WriteLine("Quelle pizza d�sirez vous? (Format: quantit�_1, taille_1, nom_pizza_1, quantit�_2, taille_2, nom_pizza_2)");
+            Pizza pizza1 = new Pizza("Fromage", "petite", 10, 10);
+            Pizza pizza2 = new Pizza("Fromage", "moyenne", 15, 20);
+            Pizza pizza3 = new Pizza("Fromage", "grande", 20, 30);
+            Pizza pizza4 = new Pizza("Royale", "petite", 10, 10);
+            Pizza pizza5 = new Pizza("Royale", "moyenne", 15, 20);
+            Pizza pizza6 = new Pizza("Royale", "grande", 20, 30);
+            Console.WriteLine("Fromage(pettite)   10euros");
+            Console.WriteLine("Fromage(moyenne)   15euros");
+            Console.WriteLine("Fromage(grande)    20euros");
+            Console.WriteLine("Royale(pettite)   15euros");
+            Console.WriteLine("Royale(moyenne)   20euros");
+            Console.WriteLine("Royale(grande)    30euros");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("Quelle pizza desirez vous? (Format: quantite_1, taille_1, nom_pizza_1, quantite_2, taille_2, nom_pizza_2)");
             String pizza = Console.ReadLine();
-            Array listeDePizza = pizza.Split(',');
-            Console.WriteLine("D�sirez vous une boisson avec?");
+            ArraySegment<String> listeDePizza = pizza.Split(',');
+            Console.WriteLine("Desirez vous une boisson avec? (yes or no)");
             String resBoisson = Console.ReadLine();
-            if (resBoisson == "Yes")
+            if (resBoisson == "yes")
             {
-                Console.WriteLine("Quelle boisson d�sirez vous? (Format: quantit�_1 contenance(en cl) nom_boisson_1, quantit�_2 boisson_2)");
+                Console.WriteLine("Quelle boisson desirez vous? (Format: quantite_1, contenance(en cl), nom_boisson_1)");
                 String boisson = Console.ReadLine();
-                Array listeDeBoisson = boisson.Split(",");
-                numeroDeCommande++;
-                clientActuelle.commandeActuelle = new Commande(numeroDeCommande, DateTime.Now.ToString("HH:mm"), DateTime.Now, clientActuelle, this, listeDePizza + listeDeBoisson);
+                ArraySegment<String> listeDeBoisson = boisson.Split(",");
+                //NbrCommande++;
                 
-                await Task.Run(() => clientActuelle.commander(listeDePizza, listeDeBoisson));
+                ClientActuelle.CommandeActuelle = new Commande(1, DateTime.Now.ToString("HH:mm"), DateTime.Now, ClientActuelle, this, listeDePizza);
+                await Task.Run(() => ClientActuelle.Commander(listeDePizza, listeDeBoisson));
             }
             else {
-                await Task.Run(() => clientActuelle.commander(listeDePizza, []));
+                 ClientActuelle.Commander(listeDePizza, null);
             }
         }
         public async void gestionCommande(Commande commande)
         {
-            this.commandeActuelle = commande;
-            this.nbrCommande += 1;
+           CommandeActuelle = commande;
+            NbrCommande += 1;
             Console.WriteLine("La commande a bien ete pris en compte");
-            //Cuisnier cuisinier = recherche sur la base donn�es de cuisinier
-            //await Task.Run(() => cuisinier.cuisiner(commandeActuelle));
-            // Livreur livreur = recherche dans la base de donn�es de livreur
+            Cuisinier cuisinier = new Cuisinier("JU");
+            await Task.Run(() => cuisinier.Cuisiner(CommandeActuelle));
+            Livreur livreur = new Livreur("ge");
             Task.Delay(5000);
-            //await Task.Run(() => livreur.livrer(commandeActuelle));
+            await Task.Run(() => livreur.livrer(CommandeActuelle));
         }
     }
 }

@@ -17,15 +17,18 @@ namespace Applications.model
             get { return _nom; }
             set { _nom = value; }
         }
+        public Cuisinier()
+        {
 
-        private Cuisinier(string nom)
+        }
+        public Cuisinier(string nom)
         {
             this.Nom = nom;
         }
-        private void Cuisiner(Commande commande)
+        public void Cuisiner(Commande commande)
         {
-            //int tempsDePréparation = // recherhe dans la base de donné à partir de get commande.items
-            //Task.Delay(tempsDePréparation * 1000);
+            int tempsDePréparation = 15;
+            Task.Delay(tempsDePréparation * 1000);
 
         }
     }

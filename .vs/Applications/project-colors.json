@@ -5,6 +5,11 @@
       "ProjectGuid": "8e6c8fc7-7f63-4e0a-a0e7-74ee7cddcb83",
       "DisplayName": "Applications",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

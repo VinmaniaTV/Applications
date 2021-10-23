@@ -14,7 +14,7 @@ namespace Applications.model
         private DateTime _date;
         private Commis _commis;
         private Client _client;
-        private List<String> _items;
+        private ArraySegment<String> _items;
 
         public int Numero
         {
@@ -42,13 +42,15 @@ namespace Applications.model
             get { return _client; }
             set { _client = value; }
         }
-        public List<String> Items
+        public ArraySegment<String> Items
         {
             get { return _items; }
             set { _items = value; }
         }
 
-        public Commande(int numero, string heure, DateTime date, Client client, Commis commis, List<String> items)
+        public Commande(){
+        }
+        public Commande(int numero, string heure, DateTime date, Client client, Commis commis, ArraySegment<String> items)
         {
             this.Numero = numero;
             this.Heure = heure;
@@ -58,10 +60,10 @@ namespace Applications.model
             this.Items = items;
         }
 
-        public void TransmettreCommande(List<String> pizza, List<String> boisson)
+        public void TransmettreCommande(ArraySegment<String> pizza, ArraySegment<String> boisson)
         {
-            this.Items = pizza.join(boisson);
-            Commis.gestionCommande(commis.commandeActuelle);
+            Items = pizza.Concat(boisson).ToArray();
+            Commis.gestionCommande(Commis.CommandeActuelle);
         }
     }
 }

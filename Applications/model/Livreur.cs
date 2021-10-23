@@ -27,12 +27,12 @@ namespace Applications.model
             if (random == 15) {
                 Console.WriteLine("Votre adresse est incorrecte");
                 Console.WriteLine("Entrez votre adresse:");
-                commande.Client.Adresse = Console.WriteLine();
+                commande.Client.Adresse = Console.ReadLine();
             }
             Console.WriteLine("Le livreur est entrain de vous apporter votre commande. Il arrivera dans " + random + " minutes");
             Task.Delay(random * 1000);
             Console.WriteLine("Le livreur est arrivé à votre adresse");
-            commande.client.payer();
+            commande.Client.payer();
         }
     }
 }

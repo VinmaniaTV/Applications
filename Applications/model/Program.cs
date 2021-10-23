@@ -2,11 +2,6 @@
 using Applications.model;
 using Applications.controller;
 
-Console.WriteLine("Hello, World!");
+Commis commis = new Commis("Didier",0);
 
-Client c = new Client("Jean Dupond", "2 rue du turfu", "0123456789", "2 septembre");
-
-Console.WriteLine(c.Telephone);
-
-//DataManager dm = new DataManager();
-DataManager.writeToXml(c);
+commis.questionner();
