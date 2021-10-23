@@ -11,54 +11,56 @@ namespace Applications.model
 {
     public class Client
     {
-        private string nom
-        {
-            get { return nom; }
-            set { nom = value; }
-        };
+        private string _nom;
+        private string _adresse;
+        private string _telephone;
+        private string _datePremiereCommande;
+        private Commande _commandeActuelle;
 
-        private string adresse
+        public string Nom
         {
-            get { return adresse}
-            set { adresse = value; }
-        };
-
-        private string téléphone
+            get { return _nom; }
+            set { _nom = value; }
+        }
+        public string Adresse
         {
-            get { return téléphone; }
-            set { téléphone = value; }
-        };
-
-        private string datePremièreCommande
+            get { return _adresse; }
+            set { _adresse = value; }
+        }
+        public string Telephone
         {
-            get { return datePremièreCommande; }
-            set { datePremièreCommande = value; }
-        };
-
-        private Commande commandeActuelle
+            get { return _telephone; }
+            set { _telephone = value; }
+        }
+        public string DatePremiereCommande
         {
-            get { return commandeActuelle; }
-            set { commandeActuelle = value; }
-        };
+            get { return _datePremiereCommande; }
+            set { _datePremiereCommande = value; }
+        }
+        public Commande CommandeActuelle
+        {
+            get { return _commandeActuelle; }
+            set { _commandeActuelle = value; }
+        }
         public Client()
         {
 
         }
-        public Client(string nom, string addresse, string télédphone, string datePremièreOrder)
+        public Client(string nom, string adresse, string telephone, string datePremiereCommande)
         {
-            this.nom = nom;
-            this.addresse = addresse;
-            this.téléphone = téléphone;
-            this.datePremièreOrder = datePremièreOrder;
-            this.commandeActuelle = null;
+            this.Nom = nom;
+            this.Adresse = adresse;
+            this.Telephone = telephone;
+            this.DatePremiereCommande = datePremiereCommande;
+            this.CommandeActuelle = null;
         }
-        public Client(string nom, string adresse, string téléphone, string datePremièreCommande, Commande commandeActuelle)
+        public Client(string nom, string adresse, string telephone, string datePremiereCommande, Commande commandeActuelle)
         {
-            this.nom = nom;
-            this.adresse = adresse;
-            this.téléphone = téléphone;
-            this.datePremièreCommande = datePremièreCommande;
-            this.commandeActuelle = commandeActuelle;
+            this.Nom = nom;
+            this.Adresse = adresse;
+            this.Telephone = telephone;
+            this.DatePremiereCommande = datePremiereCommande;
+            this.CommandeActuelle = commandeActuelle;
         }
 
 

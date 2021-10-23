@@ -15,11 +15,10 @@ namespace Applications.controller
             TextWriter tw = new StreamWriter(@"..\..\..\data\obj.xml");
             xs.Serialize(tw, o);
         }
-       
 
         public static void readFromXml(string s)
         {
-                var sr = new StreamReader(@"..\..\..\data\"+ s+".xml"))
+            var sr = new StreamReader(@"..\..\..\data\" + s + ".xml");
                 obj = (ob)xs.Deserialize(sr);
         }
     }

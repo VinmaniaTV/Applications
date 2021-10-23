@@ -10,18 +10,19 @@ namespace Applications.model
 {
     public class Cuisinier
     {
-        public string nom
+        private string _nom;
+
+        public string Nom
         {
-            get { return nom; }
-            set { nom = value; }
+            get { return _nom; }
+            set { _nom = value; }
         }
 
-        public Cuisinier(string nom)
+        private Cuisinier(string nom)
         {
-            this.nom = nom;
+            this.Nom = nom;
         }
-
-        public void Cuisiner(Commande commande)
+        private void Cuisiner(Commande commande)
         {
             //int tempsDePréparation = // recherhe dans la base de donné à partir de get commande.items
             //Task.Delay(tempsDePréparation * 1000);

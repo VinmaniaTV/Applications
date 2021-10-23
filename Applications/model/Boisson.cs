@@ -8,27 +8,31 @@ namespace Applications.model
 {
     public class Boisson
     {
-        private string nom
+        private string _nom;
+        private int _volume;
+        private int _prix;
+
+        public string Nom
         {
-            get { return nom; }
-            set { nom = value; }
+            get { return _nom; }
+            set { _nom = value; }
         }
-        private int volume
+        public int Volume
         {
-            get { return volume; }
-            set { volume = value; }
+            get { return _volume; }
+            set { _volume = value; }
         }
-        private int prix
+        public int Prix
         {
-            get { return prix; }
-            set { prix = value; }
+            get { return _prix; }
+            set { _prix = value; }
         }
 
         public Boisson(string nom, int volume, int prix)
         {
-            this.nom = nom;
-            this.volume = volume;
-            this.prix = prix;
+            this.Nom = nom;
+            this.Volume = volume;
+            this.Prix = prix;
         }
     }
 }

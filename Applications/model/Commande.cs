@@ -9,55 +9,58 @@ namespace Applications.model
 {
     public class Commande
     {
-        public int numéro
+        private int _numero;
+        private string _heure;
+        private DateTime _date;
+        private Commis _commis;
+        private Client _client;
+        private List<String> _items;
+
+        public int Numero
         {
-            get { return numéro; }
-            set { number = value; }
+            get { return _numero; }
+            set { _numero = value; }
+        }
+        public string Heure
+        {
+            get { return _heure; }
+            set { _heure = value; }
+        }
+        public DateTime Date
+        {
+            get { return _date; }
+            set { _date = value; }
         }
 
-        public string heure
+        public Commis Commis
         {
-            get { return heure; }
-            set { heure = value; }
+            get { return _commis; }
+            set { _commis = value; }
+        }
+        public Client Client
+        {
+            get { return _client; }
+            set { _client = value; }
+        }
+        public List<String> Items
+        {
+            get { return _items; }
+            set { _items = value; }
         }
 
-        public DateTime date
+        public Commande(int numero, string heure, DateTime date, Client client, Commis commis, List<String> items)
         {
-            get { return date; }
-            set { date = value; }
-        }
-
-        public Commis commis
-        {
-            get { return commis; }
-            set { commis = value; }
-        }
-        public Client client
-        {
-            get { return client; }
-            set { client = value; }
-        }
-
-        public List<String> items
-        {
-            get { return items; }
-            set { items = value; }
-        }
-
-
-        public Commande(int numéro, string heure, DateTime date, Client client, Commis commis, List<String> items)
-        {
-            this.numisro = numéro;
-            this.heure = heure;
-            this.date = date;
-            this.client = client;
-            this.commis = commis;
-            this.items = items;
+            this.Numero = numero;
+            this.Heure = heure;
+            this.Date = date;
+            this.Client = client;
+            this.Commis = commis;
+            this.Items = items;
         }
 
         public void TransmettreCommande(List<String> pizza, List<String> boisson)
         {
-            this.items = pizza + boisson;
+            this.Items = pizza.join(boisson);
             Commis.gestionCommande(commis.commandeActuelle);
         }
     }

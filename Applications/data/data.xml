@@ -3,6 +3,6 @@
 <Client xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<nom>Jean Dupond</nom>
 		<adresse>2 rue du turfu</adresse>
-		<téléphone>0123456789</téléphone>
+		<telephone>0123456789</telephone>
 		<datePremièreCommande>2 septembre</datePremièreCommande>
 </Client>

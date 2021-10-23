@@ -6,7 +6,7 @@ Console.WriteLine("Hello, World!");
 
 Client c = new Client("Jean Dupond", "2 rue du turfu", "0123456789", "2 septembre");
 
-Console.WriteLine(c.téléphone);
+Console.WriteLine(c.Telephone);
 
 //DataManager dm = new DataManager();
 DataManager.writeToXml(c);

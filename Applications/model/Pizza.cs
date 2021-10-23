@@ -8,36 +8,38 @@ namespace Applications.model
 {
     public class Pizza
     {
-        public string nom
-        {
-            get { return nom; }
-            set { nom = value; }
-        }
+        private string _nom;
+        private string _taille;
+        private int _time;
+        private int _prix;
 
-        public string taille
+        public string Nom
         {
-            get { return taille; }
-            set { taille = value; }
+            get { return _nom; }
+            set { _nom = value; }
         }
-
-        public int time
+        public string Taille
         {
-            get { return time; }
-            set { time = value; }
+            get { return _taille; }
+            set { _taille = value; }
         }
-
-        public int prix
+        public int Time
         {
-            get { return prix; }
-            set { prix = value; }
+            get { return _time; }
+            set { _time = value; }
+        }
+        public int Prix
+        {
+            get { return _prix; }
+            set { _prix = value; }
         }
 
         public Pizza(string nom, string taille, int time, int prix)
         {
-            this.nom = nom;
-            this.taille = taille;
-            this.time = time;
-            this.prix = prix;
+            this.Nom = nom;
+            this.Taille = taille;
+            this.Time = time;
+            this.Prix = prix;
         }
     }
 }
